@@ -17,6 +17,8 @@
         }
         .important-date {color: #e74c3c; font-weight: 600;}
         .submission-card {border-left: 4px solid var(--secondary-color);}
+        .easychair-btn {background-color: #8B0000; color: white; transition: all 0.3s;}
+        .easychair-btn:hover {background-color: #6B0000;}
     </style>
 </head>
 <body class="bg-light">
@@ -43,7 +45,7 @@
 
         <!-- Topics & Submission -->
         <div class="row mb-5">
-            <!-- Topics -->
+            <!-- Your Original Topics Section -->
             <div class="col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
@@ -60,7 +62,7 @@
                 </div>
             </div>
 
-            <!-- Submission -->
+            <!-- Submission Section with EasyChair Link -->
             <div class="col-md-6">
                 <div class="card h-100 submission-card">
                     <div class="card-body">
@@ -71,7 +73,16 @@
                                 <li>8-page short paper (Springer LNCS format)</li>
                                 <li>4-page short paper (Springer LNCS format)</li>
                             </ul>
-                            <p class="text-muted">Templates available at <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank">Springer LNCS website</a></p>
+                            <a href="https://easychair.org/conferences?conf=slm4health" 
+                               class="btn easychair-btn"
+                               target="_blank">
+                               Submit via EasyChair ↗
+                            </a>
+                            <p class="text-muted mt-2">Templates: 
+                                <a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines" target="_blank">
+                                    Springer LNCS
+                                </a>
+                            </p>
                         </div>
 
                         <h5>Important Dates</h5>
@@ -85,27 +96,16 @@
             </div>
         </div>
 
-        <!-- Organizers -->
+        <!-- Updated Organizers Section -->
         <section class="mb-5">
-            <h3 class="text-primary mb-4">Workshop Chairs</h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Prof. Dr. Kerstin Denecke</h5>
-                            <p class="card-text text-muted">Bern University of Applied Sciences<br>Switzerland</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Prof. Dr. Douglas Teodoro</h5>
-                            <p class="card-text text-muted">University of Geneva<br>Switzerland</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h3 class="text-primary mb-3">Organizers</h3>
+        <ul class="list-unstyled mb-0" style="line-height: 1.4;">
+           <li>• Kerstin Denecke (Bern University of Applied Sciences, Switzerland)</li>
+           <li>• Daniel Reichenpfader (University of Geneva, BFH, Switzerland)</li>
+           <li>• Yihan Deng (University of Bern, BFH, Switzerland)</li>
+           <li>• Douglas Teodoro (University of Geneva, Switzerland)</li>
+           <li>• Edward Choi (KAIST, South Korea)</li>
+        </ul>
         </section>
 
         <!-- Contact -->
@@ -117,5 +117,3 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
