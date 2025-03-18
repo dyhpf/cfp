@@ -121,14 +121,15 @@
     </div>
 </div>
 
-        <!-- Contact -->
+     <!-- Contact -->
         <footer class="border-top pt-4">
             <h4 class="text-primary">Contact Information</h4>
             <p>For inquiries: 
                 <a href="#" 
                    class="secure-email" 
-                   data-user="S2Vyc3Rpbi5kZW5lY2tl" 
-                   data-domain="YmZoLmNo" 
+                   data-user="a2Vyc3Rpbi5kZW5lY2tl" 
+                   data-domain="YmZoLmNo"
+                   data-subject="c2xtNGhlYWx0aDIwMjUgd29ya3Nob3A="
                    onclick="handleSecureEmail(event)">
                     slm4health2025@aime-conference.org
                 </a>
@@ -139,23 +140,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Email protection script
         function handleSecureEmail(event) {
             event.preventDefault();
             const link = event.target.closest('a');
-            const user = atob(link.dataset.user);  // Decodes to "Kerstin.denecke"
-            const domain = atob(link.dataset.domain);  // Decodes to "bfh.ch"
-            window.location.href = `mailto:${user}@${domain}`;
+            const user = atob(link.dataset.user);  
+            const domain = atob(link.dataset.domain);  
+            const subject = atob(link.dataset.subject);  
+            window.location.href = `mailto:${user}@${domain}?subject=${encodeURIComponent(subject)}`;
         }
     </script>
     <style>
-        /* Add visual hint for protected email */
         a.secure-email {
             cursor: pointer;
             border-bottom: 1px dashed currentColor;
         }
         a.secure-email:hover:after {
-            content: " (protected address)";
+            content: " (protected contact)";
             font-size: 0.8em;
             color: #666;
         }
